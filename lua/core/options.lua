@@ -2,7 +2,25 @@ vim.g.have_nerd_font = true -- nerd字体声明
 
 vim.o.colorcolumn = "120"  -- 高亮第120列
 
-vim.o.guicursor = "a:hor20-blinkon150-blinkoff150-blinkwait100" -- 下划线光标闪烁
+-- 光标设置
+vim.o.guicursor = "a:ver25-blinkon150-blinkoff150-blinkwait100"
+local function update_cursor_color()
+  if vim.o.background == "dark" then
+    vim.api.nvim_set_hl(0, "MyCursor", { bg = "#FFFFFF", fg = "NONE" })
+  else
+    vim.api.nvim_set_hl(0, "MyCursor", { bg = "#000000", fg = "NONE" })
+  end
+  vim.o.guicursor = "a:ver75-blinkon150-blinkoff150-blinkwait100-MyCursor"
+end
+local cursor_group = vim.api.nvim_create_augroup("CursorColorGroup", { clear = true })
+vim.api.nvim_create_autocmd({ "ColorScheme", "OptionSet" }, {
+  group = cursor_group,
+  callback = function(args)
+    if args.event == "OptionSet" and args.match ~= "background" then return end
+    update_cursor_color()
+  end,
+})
+update_cursor_color()
 
 vim.o.number = true -- 行号
 vim.o.relativenumber = true -- 相对行号
