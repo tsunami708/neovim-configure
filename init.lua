@@ -23,5 +23,8 @@ require('lazy').setup({
   require('plugins.autocmp'),
   require('plugins.autofmt'),
   require('plugins.bufferline'),
+  require('plugins.statusline'),
+  require('plugins.terminal'),
+  require('plugins.bracket'),
 })
 

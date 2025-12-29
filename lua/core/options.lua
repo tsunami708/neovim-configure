@@ -60,6 +60,8 @@ vim.o.timeoutlen = 300 -- Decrease mapped sequence wait time
 
 vim.o.linebreak = true -- 不要单词内换行
 
+vim.o.showmode = false
+
 vim.opt.termguicolors = true
 
 vim.opt.runtimepath:remove '/usr/share/vim/vimfiles' -- separate vim plugins from neovim in case vim still in use
