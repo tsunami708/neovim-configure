@@ -1,18 +1,24 @@
 return {
-  "CRAG666/betterTerm.nvim",
-  opts = {
-    position = 'bot',
-    size = 20,
-    jump_tab_mapping = 'A-$Tab'
-  },
-  keys = {
-    {
-      mode = {'n', 't', 'i'},
-      '<C-\\>',
-      function()
-        require('betterTerm').open()
-      end,
-      desc = 'Open BetterTerm 0',
+  {
+    'akinsho/toggleterm.nvim', 
+    version = "*", 
+    opts = {
+      size = 20,
+      open_mapping = [[<c-\>]],
+      direction = 'float',
+      float_opts = {
+        border = 'curved',
+        title_pos = 'center',
+      },
+      winbar = {
+        enabled = true,
+        name_formatter = function(term) --  term: Terminal
+          return term.name
+        end
+      },
+      shade_terminals = true,
+      start_in_insert = true,
+      persist_size = true,
     },
   },
 }
