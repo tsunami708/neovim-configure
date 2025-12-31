@@ -26,5 +26,6 @@ require('lazy').setup({
   require('plugins.statusline'),
   require('plugins.terminal'),
   require('plugins.bracket'),
+  require('plugins.autopairs'),
 })
 

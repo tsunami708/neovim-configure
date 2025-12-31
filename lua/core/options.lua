@@ -2,6 +2,7 @@ vim.g.have_nerd_font = true -- nerd字体声明
 
 vim.o.colorcolumn = "120"  -- 高亮第120列
 
+vim.o.background = "dark" -- 默认深色
 -- 光标设置
 vim.o.guicursor = "a:ver25-blinkon150-blinkoff150-blinkwait100"
 local function update_cursor_color()
