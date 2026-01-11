@@ -16,6 +16,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 cursor {
     hide-when-typing
+    hide-after-inactive-ms 5000
     xcursor-size 32
 }
 
