@@ -1,0 +1,31 @@
+syntax enable
+
+set expandtab                 " 使用空格代替制表符
+set tabstop=2                 " 制表符宽度为2个空格
+set softtabstop=2             " 编辑时制表符宽度为2个空格
+set shiftwidth=2              " 自动缩进宽度为2个空格
+set smarttab                  " 在行首按TAB使用shiftwidth
+set autoindent                " 自动缩进
+set smartindent               " 智能缩进
+
+set number                    " 显示绝对行号
+set relativenumber            " 显示相对行号
+
+set ignorecase                " 搜索时忽略大小写
+set smartcase                 " 当搜索包含大写字母时区分大小写
+
+set incsearch                 " 实时搜索
+set cursorline                " 高亮当前行
+set mouse=a                   " 启用鼠标支持
+set encoding=utf-8            " 使用UTF-8编码
+set backspace=indent,eol,start " 更自然的退格行为
+
+nnoremap d "_d
+vnoremap d "_d
+nnoremap c "_c
+vnoremap c "_c
+nnoremap C "_C
+nnoremap D "_D
+
+set term=xterm-256color
+autocmd TextYankPost * echo 'Yanked'
