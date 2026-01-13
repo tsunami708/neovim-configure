@@ -10,8 +10,11 @@ window-rule {
 }
 
 window-rule {
-  match title="选择文件"
-  match title="保存"
+  match title=".*选择文件.*"
+  match title=".*保存.*"
+  match title=".*查看器.*"
+  match title=".*通知.*"
+  match title=".*完成.*"
   match title="wps"
   match title="et"
   match title="wpp"

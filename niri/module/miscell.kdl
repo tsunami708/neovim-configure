@@ -1,7 +1,7 @@
 spawn-at-startup "fcitx5"
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-at-startup "brightnessctl" "set" "20%"
-
+spawn-at-startup "swww-daemon"
 environment {
     QT_QPA_PLATFORMTHEME "qt6ct"
 }
@@ -21,6 +21,10 @@ cursor {
 }
 
 
+layer-rule {
+    match namespace="swww"
+    place-within-backdrop true
+}
 overview {
     zoom 0.75
     backdrop-color "transparent"
@@ -28,4 +32,11 @@ overview {
 
 clipboard {
     disable-primary
+}
+
+
+gestures {
+    hot-corners {
+        off
+    }
 }
