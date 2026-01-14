@@ -5,28 +5,28 @@ window-rule {
 }
 
 window-rule {
-  match app-id="fcitx5"
-  open-floating true
+    match app-id="fcitx5"
+    open-floating true
 }
 
 window-rule {
-  match title=".*选择文件.*"
-  match title=".*保存.*"
-  match title=".*查看器.*"
-  match title=".*通知.*"
-  match title=".*完成.*"
-  match title="wps"
-  match title="et"
-  match title="wpp"
-  open-floating true
+    match title=".*选择文件.*"
+    match title=".*保存.*"
+    match title=".*查看器.*"
+    match title=".*通知.*"
+    match title=".*完成.*"
+    match title="wps"
+    match title="et"
+    match title="wpp"
+    open-floating true
 }
 
 
 window-rule {
-  match app-id="mpv"
-  match app-id="gThumb"
-  open-focused false
-  open-floating true
+    match app-id="mpv"
+    match app-id="gThumb"
+    open-focused false
+    open-floating true
 }
 
 window-rule {
